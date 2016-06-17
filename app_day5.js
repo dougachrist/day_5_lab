@@ -46,11 +46,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){
-
+  var sumUp = a + b + c;
+  var multiplyUp = a * b * c;
+  var thridUp = a + ' and ' + b + ' and ' + c + ' sum to ' + sumUp + '.';
+  var fourthUp = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplyUp + '.';
+  return [sumUp,multiplyUp,thridUp,fourthUp];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. don't forget to create a new branch for your work on the next question!
 
@@ -120,7 +124,7 @@ function testMultiply() {
 }
 
 function testSumAndMultiply() {
-  if (sumAndMultiply(4, 7, 5)[1] === '4 and 7 and 5 sum to 16.' && sumAndMultiply(4, 7, 5)[2] === 'The product of 4 and 7 and 5 is 140.') {
+  if (sumAndMultiply(4, 7, 5)[2] === '4 and 7 and 5 sum to 16.' && sumAndMultiply(4, 7, 5)[3] === 'The product of 4 and 7 and 5 is 140.') {
     console.log('%c TEST FOR sumAndMultiply() PASSES', 'color: green');
   } else {
     console.log('%c TEST FOR sumAndMultiply() FAILS', 'color: red');
