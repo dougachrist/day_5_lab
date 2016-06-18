@@ -46,11 +46,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){
-  var sumUp = a + b + c;
-  var multiplyUp = a * b * c;
-  var thridUp = a + ' and ' + b + ' and ' + c + ' sum to ' + sumUp + '.';
-  var fourthUp = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplyUp + '.';
-  return [sumUp,multiplyUp,thridUp,fourthUp];
+  var sumUp = sum(sum(a,b)[0],c);
+  var multiplyUp = multiply(multiply(a,b)[0],c);
+  var thridUp = a + ' and ' + b + ' and ' + c + ' sum to ' + sumUp[0] + '.';
+  var fourthUp = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplyUp[0] + '.';
+  return [sumUp[0],multiplyUp[0],thridUp,fourthUp];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -68,12 +68,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 testArray = [2,3,4];
 function sumArray(testArray){
-
+  sumItUp = sum(sum(testArray[0],testArray[1])[0],testArray[2])[0];
+  console.log('2,3,4 was passed in as an array of numbers, and 9 is their sum.');
+  return [sumItUp,testArray + ' was passed in as an array of numbers, and ' + sumItUp + ' is their sum.'];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don't forget to create a new branch for your work on the next question!
 
