@@ -28,7 +28,6 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a,b){
   var numMultiply = a * b;
   return numArray = [numMultiply,'The product of ' + a + ' and ' + b + ' is ' + numMultiply + '.'];
-
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -69,7 +68,6 @@ Test this function by hand in the console to get it working, and when you think 
 testArray = [2,3,4];
 function sumArray(testArray){
   sumItUp = sum(sum(testArray[0],testArray[1])[0],testArray[2])[0];
-  console.log('2,3,4 was passed in as an array of numbers, and 9 is their sum.');
   return [sumItUp,testArray + ' was passed in as an array of numbers, and ' + sumItUp + ' is their sum.'];
 }
 
@@ -87,6 +85,10 @@ Note: You are not allowed to use the arithmetic operators + and * in this functi
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+function multiplyArray(testArray){
+  multiplyItUp = multiply(multiply(testArray[0],testArray[1])[0],testArray[2])[0];
+  return [multiplyItUp,'The numbers ' + testArray + ' have a product of ' + multiplyItUp + '.'];
+}
 
 // // function multiplyArray(testArray) {
 //
@@ -94,7 +96,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Here is the test for multiplyArray(); uncomment it to run it
 
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Submit the link to the repo via Canvas.
 
